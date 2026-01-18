@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "noinvis",
+  "version": "${version}",
+  "name": "NoInvisibility",
+  "description": "Invisible Entities (including players) will never be invisible again.",
+  "authors": [],
+  "contact": {},
+  "license": "GPL-3.0",
+  "icon": "assets/noinvis/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "com.j0ker2j0ker.noinvis.client.NoinvisClient"
+    ]
+  },
+  "mixins": [
+    "noinvis.mixins.json",
+    {
+      "config": "noinvis.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
